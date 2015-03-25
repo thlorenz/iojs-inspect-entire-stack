@@ -1,0 +1,57 @@
+CPU     ID                    FUNCTION:NAME
+  6  17304             uv_getaddrinfo:entry iojs: hostname: raw.githubusercontent.com
+              iojs`uv_getaddrinfo
+              iojs`node::cares_wrap::GetAddrInfo(v8::FunctionCallbackInfo<v8::Value> const&)+0x262
+              iojs`v8::internal::FunctionCallbackArguments::Call(void (*)(v8::FunctionCallbackInfo<v8::Value> const&))+0x9f
+              iojs`v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)+0x21d
+              0xb93e57060bb
+              0xb93e585c91b
+              0xb93e5859a32
+              0xb93e571ea55
+              0xb93e584ff37
+              0xb93e571ea55
+              0xb93e584f115
+              0xb93e571ea55
+              0xb93e584ce94
+              0xb93e584b80d
+              0xb93e5847664
+              0xb93e571eda5
+              0xb93e58460c5
+              0xb93e583cfd7
+              0xb93e583cd0d
+              0xb93e583cbc9
+              0xb93e58357c1
+              0xb93e5906564
+              0xb93e571ea55
+              0xb93e5833faf
+              0xb93e583141a
+              0xb93e571f0c0
+              0xb93e571dff1
+              iojs`v8::internal::Invoke(bool, v8::internal::Handle<v8::internal::JSFunction>, v8::internal::Handle<v8::internal::Object>, int, v8::internal::Handle<v8::internal::Object>*)+0x238
+              iojs`v8::Function::Call(v8::Handle<v8::Value>, int, v8::Handle<v8::Value>*)+0xc1
+              iojs`node::Parser::on_headers_complete_()+0x1f3
+              iojs`http_parser_execute+0x319
+              iojs`node::Parser::Execute(v8::FunctionCallbackInfo<v8::Value> const&)+0x106
+              iojs`v8::internal::FunctionCallbackArguments::Call(void (*)(v8::FunctionCallbackInfo<v8::Value> const&))+0x9f
+              iojs`v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)+0x21d
+              0xb93e57060bb
+              0xb93e58307f7
+              0xb93e59065c7
+              0xb93e571ea55
+              0xb93e58f9b7e
+              0xb93e58fd23e
+              0xb93e571ea55
+              0xb93e571f0bc
+              0xb93e571dff1
+              iojs`v8::internal::Invoke(bool, v8::internal::Handle<v8::internal::JSFunction>, v8::internal::Handle<v8::internal::Object>, int, v8::internal::Handle<v8::internal::Object>*)+0x238
+              iojs`v8::Function::Call(v8::Handle<v8::Value>, int, v8::Handle<v8::Value>*)+0xc1
+              iojs`node::AsyncWrap::MakeCallback(v8::Handle<v8::Function>, int, v8::Handle<v8::Value>*)+0x21d
+              iojs`node::StreamWrapCallbacks::DoRead(uv_stream_s*, long, uv_buf_t const*, uv_handle_type)+0x276
+              iojs`uv__stream_io+0x4f2
+              iojs`uv__io_poll+0x62d
+              iojs`uv_run+0x114
+              iojs`node::Start(int, char**)+0x2a5
+              iojs`start+0x34
+              iojs`0x3
+
+

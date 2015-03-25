@@ -1,0 +1,59 @@
+CPU     ID                    FUNCTION:NAME
+  4  17402             uv_getaddrinfo:entry iojs: hostname: raw.githubusercontent.com
+              iojs`uv_getaddrinfo
+              iojs`node::cares_wrap::GetAddrInfo(v8::FunctionCallbackInfo<v8::Value> const&)+0x262
+              iojs`v8::internal::FunctionCallbackArguments::Call(void (*)(v8::FunctionCallbackInfo<v8::Value> const&))+0x9f
+              iojs`v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)+0x21d
+              0xe0c630060bb Stub:CEntryStub
+              0xe0c6315759b LazyCompile:~lookup dns.js:87
+              0xe0c63154852 LazyCompile:~Socket.connect net.js:829
+              0xe0c6301ea55 Builtin:ArgumentsAdaptorTrampoline
+              0xe0c6314b117 LazyCompile:~exports.connect _tls_wrap.js:798
+              0xe0c6301ea55 Builtin:ArgumentsAdaptorTrampoline
+              0xe0c6314a2f5 LazyCompile:~createConnection https.js:43
+              0xe0c6301ea55 Builtin:ArgumentsAdaptorTrampoline
+              0xe0c63147f94 LazyCompile:~Agent.createSocket _http_agent.js:158
+              0xe0c6314690d LazyCompile:~Agent.addRequest _http_agent.js:114
+              0xe0c63142784 LazyCompile:~ClientRequest _http_client.js:18
+              0xe0c6301eda5 Builtin:JSConstructStubGeneric
+              0xe0c631411e5 LazyCompile:~exports.request http.js:29
+              0xe0c631380f7 LazyCompile:~exports.request https.js:110
+              0xe0c63137e2d LazyCompile:~exports.get https.js:120
+              0xe0c63137ce9 LazyCompile:~getTipOfTheDay /Volumes/d/dev/talks/debugging-profiling-io.js/demos/demo-2/app.js:60
+              0xe0c631306c1 LazyCompile:~onRequest /Volumes/d/dev/talks/debugging-profiling-io.js/demos/demo-2/app.js:85
+              0xe0c630812ec LazyCompile:~emit events.js:58
+              0xe0c6301ea55 Builtin:ArgumentsAdaptorTrampoline
+              0xe0c6312eeaf LazyCompile:~parserOnIncoming _http_server.js:398
+              0xe0c6312c3da LazyCompile:~parserOnHeadersComplete _http_common.js:42
+              0xe0c6301f0c0 Builtin:JSEntryTrampoline
+              0xe0c6301dff1 Stub:JSEntryStub
+              iojs`v8::internal::Invoke(bool, v8::internal::Handle<v8::internal::JSFunction>, v8::internal::Handle<v8::internal::Object>, int, v8::internal::Handle<v8::internal::Object>*)+0x238
+              iojs`v8::Function::Call(v8::Handle<v8::Value>, int, v8::Handle<v8::Value>*)+0xc1
+              iojs`node::Parser::on_headers_complete_()+0x1f3
+              iojs`http_parser_execute+0x319
+              iojs`node::Parser::Execute(v8::FunctionCallbackInfo<v8::Value> const&)+0x106
+              iojs`v8::internal::FunctionCallbackArguments::Call(void (*)(v8::FunctionCallbackInfo<v8::Value> const&))+0x9f
+              iojs`v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)+0x21d
+              0xe0c630060bb Stub:CEntryStub
+              0xe0c6312b7b7 LazyCompile:~socketOnData _http_server.js:318
+              0xe0c63081287 LazyCompile:~emit events.js:58
+              0xe0c6301ea55 Builtin:ArgumentsAdaptorTrampoline
+              0xe0c6312ae5c LazyCompile:~readableAddChunk _stream_readable.js:119
+              0xe0c6312a8d7 LazyCompile:~Readable.push _stream_readable.js:95
+              0xe0c6301ea55 Builtin:ArgumentsAdaptorTrampoline
+              0xe0c63128fdd LazyCompile:~onread net.js:487
+              0xe0c6301ea55 Builtin:ArgumentsAdaptorTrampoline
+              0xe0c6301f0bc Builtin:JSEntryTrampoline
+              0xe0c6301dff1 Stub:JSEntryStub
+              iojs`v8::internal::Invoke(bool, v8::internal::Handle<v8::internal::JSFunction>, v8::internal::Handle<v8::internal::Object>, int, v8::internal::Handle<v8::internal::Object>*)+0x238
+              iojs`v8::Function::Call(v8::Handle<v8::Value>, int, v8::Handle<v8::Value>*)+0xc1
+              iojs`node::AsyncWrap::MakeCallback(v8::Handle<v8::Function>, int, v8::Handle<v8::Value>*)+0x21d
+              iojs`node::StreamWrapCallbacks::DoRead(uv_stream_s*, long, uv_buf_t const*, uv_handle_type)+0x276
+              iojs`uv__stream_io+0x4f2
+              iojs`uv__io_poll+0x62d
+              iojs`uv_run+0x114
+              iojs`node::Start(int, char**)+0x2a5
+              iojs`start+0x34
+              iojs`0x3
+
+

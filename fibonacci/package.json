@@ -1,0 +1,12 @@
+{
+  "name": "fibonacci",
+  "description": "Demonstrates use of v8-profiler to detect perf bottleneck in JavaScript.",
+  "main": "fibonacci.js",
+  "scripts": {
+    "start-v8profiler": "V8PROFILE=1 iojs fibonacci.js",
+    "start": "iojs fibonaaci.js"
+  },
+  "dependencies": {
+    "v8-profiler": "~5.2.3"
+  }
+}

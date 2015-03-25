@@ -1,0 +1,30 @@
+CPU     ID                    FUNCTION:NAME
+  0    337                    connect:entry iojs: 199.27.76.133:443
+
+              libsystem_kernel.dylib`__connect+0xa
+              iojs`node::TCPWrap::Connect(v8::FunctionCallbackInfo<v8::Value> const&)+0x1cf
+              iojs`v8::internal::FunctionCallbackArguments::Call(void (*)(v8::FunctionCallbackInfo<v8::Value> const&))+0x9f
+              iojs`v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)+0x21d
+              0x360492a060bb Stub:CEntryStub
+              0x360492b65684 LazyCompile:~connect net.js:761
+              0x360492b6504e LazyCompile:~ net.js:900
+              0x360492a24bc6 Builtin:FunctionApply
+              0x360492b64ccc LazyCompile:~asyncCallback dns.js:59
+              0x360492a1ea55 Builtin:ArgumentsAdaptorTrampoline
+              0x360492b64b89 LazyCompile:~onlookup dns.js:73
+              0x360492a1f0c0 Builtin:JSEntryTrampoline
+              0x360492a1dff1 Stub:JSEntryStub
+              iojs`v8::internal::Invoke(bool, v8::internal::Handle<v8::internal::JSFunction>, v8::internal::Handle<v8::internal::Object>, int, v8::internal::Handle<v8::internal::Object>*)+0x238
+              iojs`v8::Function::Call(v8::Handle<v8::Value>, int, v8::Handle<v8::Value>*)+0xc1
+              iojs`node::AsyncWrap::MakeCallback(v8::Handle<v8::Function>, int, v8::Handle<v8::Value>*)+0x21d
+              iojs`node::cares_wrap::AfterGetAddrInfo(uv_getaddrinfo_s*, int, addrinfo*)+0x22b
+              iojs`uv__work_done+0xaf
+              iojs`uv__async_event+0x3e
+              iojs`uv__async_io+0x88
+              iojs`uv__io_poll+0x62d
+              iojs`uv_run+0x114
+              iojs`node::Start(int, char**)+0x2a5
+              iojs`start+0x34
+              iojs`0x3
+
+

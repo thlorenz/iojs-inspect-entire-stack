@@ -1,0 +1,14 @@
+{
+  "name": "welcome-tip",
+  "version": "1.0.0",
+  "description": "An app to demonstrate how to trace problems detected on systems level back to JavaScript.",
+  "main": "app.js",
+  "scripts": {
+    "start-v8profiler": "V8PROFILE=1 iojs --perf-basic-prof app.js",
+    "start": "iojs --perf-basic-prof app.js"
+  },
+  "dependencies": {
+    "concat-stream": "~1.4.7",
+    "v8-profiler": "~5.2.3"
+  }
+}
