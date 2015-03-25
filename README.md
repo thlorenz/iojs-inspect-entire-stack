@@ -2,6 +2,50 @@
 
 Showing how to inspect the entire io.js stack.
 
+## Building io.js in Debug Mode
+
+### clone it first
+
+```sh
+https://github.com/iojs/io.js
+cd io.js
+git checkout v1.x
+```
+
+### build the fast way
+
+```sh
+brew install ninja
+
+./configure --xcode --without-snapshot
+tools/gyp_node.py -f ninja
+ninja -C out/Debug
+
+ln -s out/Debug/iojs iojs_g
+```
+
+### build the slow way
+
+```sh
+./configure --xcode --without-snapshot
+make -j8 iojs_g
+```
+
+## Building io.js in **Release** mode
+
+### build the fast way
+
+```sh
+ninja -C out/Release
+ln -s out/Release/iojs iojs
+```
+
+### build the slow way
+
+```sh
+make -j8 iojs
+```
+
 ## Install Prerequisites
 
 ```
@@ -55,7 +99,7 @@ V8PROFILE=1 iojs app.js
 
 ## ./external-request/profile-v8.sh
 
-## get everything initialized 
+## get everything initialized
 curl localhost:8000 &&                   \
                                          \
 ## start profiler                        \
@@ -100,13 +144,13 @@ sudo profile_1ms.d -x switchrate=1000hz -p $1                               | \
 # save to file and pipe through
  tee samples.cpuprofile                                                     | \
                                                                               \
-# convert cpuprofile to trace-viewer format                              
+# convert cpuprofile to trace-viewer format
   traceviewify > samples-traceview.json &
 
-## request page 3 times while profiling                    
+## request page 3 times while profiling
 ab -n 3 -c 1 http://:::8000/ &&                           \
                                                           \
-## kill process to have it write /tmp/perf-<pid>.map file 
+## kill process to have it write /tmp/perf-<pid>.map file
 sudo kill <pid>
 
 ```
@@ -115,7 +159,7 @@ Now we can inspect `samples.cpuprofile` inside Chrome DevTools and the [flamegra
 app](http://thlorenz.github.io/flamegraph/web/) and `samples-traceview.json` inside
 [chrome://tracing](chrome://tracing).
 
-We realize we have a bottleneck in ... 
+We realize we have a bottleneck in ...
 
 ##### Count TCP received messages by remote IP address:
 
@@ -194,7 +238,7 @@ Very simple DTrace script:
 
 ```awk
 
-/* 
+/*
 int uv_getaddrinfo(uv_loop_t* loop,
                    uv_getaddrinfo_t* req,
                    uv_getaddrinfo_cb cb,
